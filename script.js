@@ -15,7 +15,7 @@ ang.controller("fleurishCTRL", function($scope, $http){
 	// 	$scope.events = response.data;
 	// });
 
-	$scope.createEvent = function(response){
+	$scope.createEvent = function(){
 		var createEvent = {
 			"title"				: $('#newEventTitle').val(),
 			"description" 		: $('#newEventDes').val(),
@@ -34,7 +34,7 @@ ang.controller("fleurishCTRL", function($scope, $http){
 			"fleur"				: $('#newEventFleur').val(),
 		}
 
-		$http.post(URL+'/create-Event', createEvent, function(response){
+		$http.post(URL+'/create-Event', createEvent, function(){
 			createEvent;
 
 			$('#newEventTitle').val() == $('#newEventTitle').val("");

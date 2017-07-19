@@ -194,28 +194,28 @@
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Event Title</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventTitle" placeholder="Give your event a title">
+					<input type="text" class="form-control createForm" id="newEventTitle" ng-model="createEvent.title" placeholder="Give your event a title">
 				</div>
 			</div>
 		<!-- event description -->  
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Description</label>
 				<div class="col-sm-6">
-					<textarea type="text" class="form-control createForm" rows="3" id="newEventDes" placeholder="Lengthy and overexaggerated description to bring people to the event!"></textarea>
+					<textarea type="text" class="form-control createForm" rows="3" id="newEventDes" ng-model="createEvent.Des" placeholder="Lengthy and overexaggerated description to bring people to the event!"></textarea>
 				</div>
 			</div>
 		<!-- event type --> 
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Website</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventWebsite" placeholder="Website">
+					<input type="text" class="form-control createForm" id="newEventWebsite"  ng-model="createEvent.website" placeholder="Website">
 				</div>
 			</div>
 		<!-- event type --> 
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Type</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventType" placeholder="Type of Event">
+					<input type="text" class="form-control createForm" id="newEventType"  ng-model="createEvent.type" placeholder="Type of Event">
 				</div>
 			</div>
 
@@ -223,13 +223,13 @@
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Location</label>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventStreet" placeholder="Street">
+					<input type="text" class="form-control createForm" id="newEventStreet"  ng-model="createEvent.street" placeholder="Street">
 				</div>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventCity" placeholder="City">
+					<input type="text" class="form-control createForm" id="newEventCity"  ng-model="createEvent.city" placeholder="City">
 				</div>
 				<div class="col-sm-1">
-					<input type="text" class="form-control createForm" id="newEventState" placeholder="State">
+					<input type="text" class="form-control createForm" id="newEventState"  ng-model="createEvent.state" placeholder="State">
 				</div>
 				<div class="col-sm-1">
 					<input type="text" class="form-control createForm" id="newEventZip" placeholder="Zip">
