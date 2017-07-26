@@ -11,56 +11,40 @@ ang.controller("fleurishCTRL", function($scope, $http){
 		$scope.events = response.data;
 	});
 
-	// $http.post(URL+"/create-Event").then(function(response){
-	// 	$scope.events = response.data;
-	// });
-
-	$scope.createEvent = function(){
-		var createEvent = {
-			"title"				: $('#newEventTitle').val(),
-			"description" 		: $('#newEventDes').val(),
-			"type"				: $('#newEventType').val(),
-			"website"			: $('#newEventWebsite').val(),
-			"street" 			: $('#newEventStreet').val(),
-			"city" 				: $('#newEventCity').val(),
-			"state" 			: $('#newEventState').val(), 
-			"zip"				: $('#newEventZip').val(),
-			"startDate"			: $('#newEventStartDate').val(), 
-			"endDate"			: $('#newEventEndDate').val(),
-			"startTime"			: $('#newEventStartTime').val(), 
-			"endTime"			: $('#newEventEndTime').val(),
-			"ageRestriction" 	: $('#newEventAgeRes').val(),
-			"admission" 		: $('#newEventAdmission').val(),
-			"fleur"				: $('#newEventFleur').val(),
-		}
-
-		$http.post(URL+'/create-Event', createEvent, function(){
-			createEvent;
-
-			$('#newEventTitle').val() == $('#newEventTitle').val("");
-			$('#newEventDes').val() == $('#newEventDes').val("");
-			$('#newEventType').val() == $('#newEventType').val("");
-			$('#newEventWebsite').val() == $('#newEventWebsite').val("");
-			$('#newEventStreet').val() == $('#newEventStreet').val("");
-			$('#newEventCity').val() == $('#newEventCity').val("");
-			$('#newEventState').val() == $('#newEventState').val("");
-			$('#newEventZip').val() == $('#newEventZip').val("");
-			$('#newEventStartDate').val() == $('#newEventStartDate').val("");
-			$('#newEventEndDate').val() == $('#newEventEndDate').val("");
-			$('#newEventStartTime').val() == $('#newEventStartTime').val("");
-			$('#newEventEndTime').val() == $('#newEventEndTime').val("");
-			$('#newEventAgeRes').val() == $('#newEventAgeRes').val("");
-			$('#newEventAdmission').val() == $('#newEventAdmission').val("");
-			$('#newEventFleur').val() == $('#newEventFleur').val("");
-
-
-		})
+	// onclick function for create event form
+	$scope.createEvent = function(response){
+		
+		$http.post(URL+'/create-Event', $scope.newEvent).then(function(res){
+			// $scope.$apply();
+		});
 
 		$('.alert').toggle();
 		
+		$scope.newEvent = {};
+
+		
 	};
 
+
+
+	// onclick function for creat account form
+	$scope.createAccount = function(){
+	 	var createAccount = {
+				"firstName": $('#firstName').val(),
+				"lastName": $('#lastName').val(),
+				"signInEmail": $('#signInEmail').val(),
+				"password": $('#createPassword').val(),
+				"confirmPassword": $('#retypePassword').val()
+		}
+		$http.post(URL+'/create-Account', createAccount, function(){
+				createAccount;
+		})
+		
+	};
+
+
 });
+
 
 
 // signUp
@@ -81,56 +65,6 @@ ang.controller("fleurishCTRL", function($scope, $http){
 		$('#createAccount').trigger("reset");
 
 	});
-
-
-// create new event & posting to DB
-// $('#createEvent').click(function(){
-// 	var createEvent = {
-// 		"title"				: $('#newEventTitle').val(),
-// 		"description" 		: $('#newEventDes').val(),
-// 		"type"				: $('#newEventType').val(),
-// 		"website"			: $('#newEventWebsite').val(),
-// 		"street" 			: $('#newEventStreet').val(),
-// 		"city" 				: $('#newEventCity').val(),
-// 		"state" 			: $('#newEventState').val(), 
-// 		"zip"				: $('#newEventZip').val(),
-// 		"startDate"			: $('#newEventStartDate').val(), 
-// 		"endDate"			: $('#newEventEndDate').val(),
-// 		"startTime"			: $('#newEventStartTime').val(), 
-// 		"endTime"			: $('#newEventEndTime').val(),
-// 		"ageRestriction" 	: $('#newEventAgeRes').val(),
-// 		"admission" 		: $('#newEventAdmission').val(),
-// 		"fleur"				: $('#newEventFleur').val(),
-// 	}
-
-// 	$.post(URL+'/create-Event', createEvent, function(err,response){
-// 		createEvent;
-
-// 		$('#newEventTitle').val() == $('#newEventTitle').val("");
-// 		$('#newEventDes').val() == $('#newEventDes').val("");
-// 		$('#newEventType').val() == $('#newEventType').val("");
-// 		$('#newEventWebsite').val() == $('#newEventWebsite').val("");
-// 		$('#newEventStreet').val() == $('#newEventStreet').val("");
-// 		$('#newEventCity').val() == $('#newEventCity').val("");
-// 		$('#newEventState').val() == $('#newEventState').val("");
-// 		$('#newEventZip').val() == $('#newEventZip').val("");
-// 		$('#newEventStartDate').val() == $('#newEventStartDate').val("");
-// 		$('#newEventEndDate').val() == $('#newEventEndDate').val("");
-// 		$('#newEventStartTime').val() == $('#newEventStartTime').val("");
-// 		$('#newEventEndTime').val() == $('#newEventEndTime').val("");
-// 		$('#newEventAgeRes').val() == $('#newEventAgeRes').val("");
-// 		$('#newEventAdmission').val() == $('#newEventAdmission').val("");
-// 		$('#newEventFleur').val() == $('#newEventFleur').val("");
-
-
-// 	})
-
-// 		$('.alert').toggle();
-		
-// })
-
-
-
 
 
 // login

@@ -194,28 +194,28 @@
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Event Title</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventTitle" ng-model="createEvent.title" placeholder="Give your event a title">
+					<input type="text" class="form-control createForm" id="newEventTitle" ng-model="newEvent.title" placeholder="Give your event a title">
 				</div>
 			</div>
 		<!-- event description -->  
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Description</label>
 				<div class="col-sm-6">
-					<textarea type="text" class="form-control createForm" rows="3" id="newEventDes" ng-model="createEvent.Des" placeholder="Lengthy and overexaggerated description to bring people to the event!"></textarea>
+					<textarea type="text" class="form-control createForm" rows="3" id="newEventDes" ng-model="newEvent.Des" placeholder="Lengthy and overexaggerated description to bring people to the event!"></textarea>
 				</div>
 			</div>
 		<!-- event type --> 
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Website</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventWebsite"  ng-model="createEvent.website" placeholder="Website">
+					<input type="text" class="form-control createForm" id="newEventWebsite"  ng-model="newEvent.website" placeholder="Website">
 				</div>
 			</div>
 		<!-- event type --> 
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Type</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control createForm" id="newEventType"  ng-model="createEvent.type" placeholder="Type of Event">
+					<input type="text" class="form-control createForm" id="newEventType"  ng-model="newEvent.type" placeholder="Type of Event">
 				</div>
 			</div>
 
@@ -223,43 +223,43 @@
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Location</label>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventStreet"  ng-model="createEvent.street" placeholder="Street">
+					<input type="text" class="form-control createForm" id="newEventStreet"  ng-model="newEvent.street" placeholder="Street">
 				</div>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventCity"  ng-model="createEvent.city" placeholder="City">
+					<input type="text" class="form-control createForm" id="newEventCity"  ng-model="newEvent.city" placeholder="City">
 				</div>
 				<div class="col-sm-1">
-					<input type="text" class="form-control createForm" id="newEventState"  ng-model="createEvent.state" placeholder="State">
+					<input type="text" class="form-control createForm" id="newEventState"  ng-model="newEvent.state" placeholder="State">
 				</div>
 				<div class="col-sm-1">
-					<input type="text" class="form-control createForm" id="newEventZip" placeholder="Zip">
+					<input type="text" class="form-control createForm" id="newEventZip"  ng-model="newEvent.zip" placeholder="Zip">
 				</div>
 			</div>
 		<!-- event Date -->  
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Date</label>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventStartDate" placeholder="Start Date">
+					<input type="text" class="form-control createForm" id="newEventStartDate"  ng-model="newEvent.startDate" placeholder="Start Date">
 				</div>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventEndDate" placeholder="End Date">
+					<input type="text" class="form-control createForm" id="newEventEndDate"  ng-model="newEvent.endDate" placeholder="End Date">
 				</div>
 			</div>
 		<!-- event Time -->
 			<div class="form-group">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Time</label>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventStartTime" placeholder="Start Time">
+					<input type="text" class="form-control createForm" id="newEventStartTime"  ng-model="newEvent.startTime" placeholder="Start Time">
 				</div>
 				<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventEndTime" placeholder="End Time">
+					<input type="text" class="form-control createForm" id="newEventEndTime"  ng-model="newEvent.endTime" placeholder="End Time">
 				</div>
 			</div>
 		<!-- age restriction -->
 			<div class="form-group form-inline">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Age Restriction</label>
 					<div class="col-sm-2">
-					<input type="text" class="form-control createForm" id="newEventAgeRes" placeholder="Yes or No">
+					<input type="text" class="form-control createForm" id="newEventAgeRes"  ng-model="newEvent.ageRes" placeholder="Yes or No">
 				</div>
 			</div>
 		<!-- admission price -->
@@ -267,7 +267,7 @@
 				<label class="col-sm-offset-1 col-sm-2 control-label">Admission Price</label>
 				<div class="col-sm-4 input-group adminAdd">
 					<div class="input-group-addon createForm">$</div>
-						<input type="text" class="form-control createForm" id="newEventAdmission" placeholder="Amount">
+						<input type="text" class="form-control createForm" id="newEventAdmission"  ng-model="newEvent.admission" placeholder="Amount">
 					<div class="input-group-addon createForm">.00</div>
 				</div>
 			</div>
@@ -282,7 +282,7 @@
 			<div class="form-group form-inline">
 				<label class="col-sm-offset-1 col-sm-2 control-label">Fleur</label>
 					<div class="col-sm-4">
-					<input type="text" class="form-control createForm" id="newEventFleur" placeholder="Estimated # of eventgoers">
+					<input type="text" class="form-control createForm" id="newEventFleur"  ng-model="newEvent.fleur" placeholder="Estimated # of eventgoers">
 				</div>
 			</div>
 
@@ -296,6 +296,8 @@
 		</form>
 
 </div>
+
+
 <!-- / new event form -->
 
 

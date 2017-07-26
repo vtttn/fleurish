@@ -95,7 +95,7 @@ app.get('/all-event', function(request, response) {
 		if(err){
 			console.log(err)
 		}else{
-			response.json(Events);
+			response.send(Events);
 		}
 	});
 });
@@ -114,10 +114,41 @@ app.post('/create-Event', function(request,response){
 // define the folder that will be used for static assets
 app.use(express.static('public'));
 
+// edit events and save to DB
+app.post('/edit-event', function(request,response){
+	Events.find(function(err,Events){
+		console.log(request.body);
+	})
+
+});
+
+
+// app.post('/edit-event', function(request,response){
+// 	Events.find(request.body,function(err,Events){
+// 		if(err){
+// 			console.log("Error in edit event.")
+// 		}else{
+// 			Events.fleur = "request.body";
+// 			Events.save(function(err,response){
+// 				if(err){
+// 					console.log("Error in save event.")
+// 				}else{
+// 					response.send("yay")
+// 				}
+// 			})	
+// 		}
+// 	})
+
+// });
 
 
 
 
+
+// delete an event in DB
+
+
+// save the fleur buton push
 
 
 
